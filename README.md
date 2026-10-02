@@ -154,8 +154,6 @@ Use `--no-metadata` to disable the sidecar.
 | `OPENAI_IMAGE_OUTPUT_DIR` | Default output directory |
 | `OPENAI_IMAGE_TIMEOUT` | HTTP timeout in seconds; defaults to 600 |
 
-`FAITH_IMAGE_OUTPUT_DIR` is also recognized as a compatibility fallback.
-
 ## Python API
 
 ```python

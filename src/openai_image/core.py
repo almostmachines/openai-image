@@ -244,7 +244,6 @@ def _string_values(*values: Any) -> list[str]:
 def _default_output_dir() -> str:
     return (
         os.getenv("OPENAI_IMAGE_OUTPUT_DIR")
-        or os.getenv("FAITH_IMAGE_OUTPUT_DIR")
         or DEFAULT_OUTPUT_DIR
     )
 
