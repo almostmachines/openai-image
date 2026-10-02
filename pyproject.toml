@@ -1,0 +1,42 @@
+[build-system]
+requires = ["uv_build>=0.9.0,<0.10.0"]
+build-backend = "uv_build"
+
+[project]
+name = "openai-image"
+version = "0.1.0"
+description = "Generate and edit images with OpenAI's image API"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "almostmachines" }]
+requires-python = ">=3.10"
+keywords = ["openai", "image-generation", "cli"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Multimedia :: Graphics",
+]
+dependencies = []
+
+[project.scripts]
+openai-image = "openai_image.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/almostmachines/openai-image"
+Repository = "https://github.com/almostmachines/openai-image.git"
+Issues = "https://github.com/almostmachines/openai-image/issues"
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 88
