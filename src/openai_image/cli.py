@@ -60,7 +60,7 @@ def build_parser() -> ArgumentParser:
   OPENAI_BASE_URL             API base URL (default: https://api.openai.com/v1)
   OPENAI_ORGANIZATION         Optional organization header
   OPENAI_PROJECT              Optional project header
-  OPENAI_IMAGE_OUTPUT_DIR     Default output directory (default: ./openai-images)
+  OPENAI_IMAGE_OUTPUT_DIR     Default output directory (default: current directory)
   OPENAI_IMAGE_TIMEOUT        HTTP timeout in seconds (default: 600)
 
 Reference images may be local paths, HTTP(S) URLs, image data URLs, or OpenAI file IDs.

@@ -29,6 +29,12 @@ def test_parse_size_and_gpt_25_validation(tmp_path):
         normalize_image_request({"prompt": "hello", "size": "1025x1024"}, cwd=tmp_path)
 
 
+def test_default_output_dir_is_working_directory(tmp_path, monkeypatch):
+    monkeypatch.delenv("OPENAI_IMAGE_OUTPUT_DIR", raising=False)
+    request = normalize_image_request({"prompt": "hello"}, cwd=tmp_path)
+    assert request.output_dir == tmp_path.resolve()
+
+
 def test_reference_classification(tmp_path):
     assert classify_reference("https://example.com/a.png", tmp_path).kind == "url"
     assert classify_reference("data:image/png;base64,AAAA", tmp_path).kind == "data_url"

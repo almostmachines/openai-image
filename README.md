@@ -77,7 +77,7 @@ openai-image --input request.json --json
 cat request.json | openai-image --input - --json
 ```
 
-Images are written to `./openai-images` by default. Change this with `--output-dir` or `OPENAI_IMAGE_OUTPUT_DIR`.
+Images are written to the current working directory by default. Change this with `--output-dir` or `OPENAI_IMAGE_OUTPUT_DIR`.
 
 ## Options
 
@@ -120,7 +120,7 @@ CLI options override corresponding values from the input object. CLI references 
   "output_format": "png",
   "reference_images": ["./reference.png"],
   "mask": "./mask.png",
-  "output_dir": "./openai-images",
+  "output_dir": ".",
   "output_prefix": "my-image"
 }
 ```
@@ -163,7 +163,6 @@ result = create_image(
     {
         "prompt": "A tiny owl reading a book",
         "quality": "medium",
-        "output_dir": "./openai-images",
     }
 )
 

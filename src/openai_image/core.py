@@ -19,7 +19,7 @@ from typing import Any
 
 DEFAULT_MODEL = "gpt-image-2.5-flare"
 DEFAULT_BASE_URL = "https://api.openai.com/v1"
-DEFAULT_OUTPUT_DIR = "openai-images"
+DEFAULT_OUTPUT_DIR = "."
 
 VALID_QUALITIES = frozenset({"low", "medium", "high", "xhigh", "max", "auto"})
 VALID_FORMATS = frozenset({"png", "jpeg", "webp"})
